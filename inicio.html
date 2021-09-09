@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hola Mundo en GitHub</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+
+  <!-- Barra de navegación - inicio -->
+  <nav id="nav" class="wrap">
+
+    <a href="https://guides.github.com/" target="_blank">
+      <img src="img/logo.png" alt="GitHub Guides Logo">
+    </a>
+    
+    <ul class="menu">
+      <li>
+        <a href="https://www.youtube.com/githubguides" target="_blank">
+          Vídeos
+        </a>
+      </li>
+      <li>
+        <a href="https://docs.github.com/es" target="_blank">
+          Ayuda
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/" target="_blank">
+          GitHub
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+  <!-- Barra de navegación - fin -->
+
+  <!-- Encabezado - inicio -->
+  <header>
+
+    <div class="wrap">
+
+      <div class="icon-container">
+        <i class="fas fa-globe-americas"></i>
+      </div>
+      <h1 class="titulo">      
+        Hola Mundo
+      </h1>
+      <p class="tiempo">
+        <i class="far fa-clock"></i>
+        Lectura de 10 minutos
+      </p>
+      
+    </div>
+
+  </header>
+  <!-- Encabezado - fin -->
+
+  <section class="wrap">
+    <!-- Contenido principal - inicio -->
+    <main>
+
+      <p id="intro">
+        El proyecto <strong>Hola Mundo</strong> es una tradición consagrada en la 
+        programación de computadoras. Es un ejercicio sencillo que le ayuda a empezar 
+        a aprender algo nuevo. ¡Empecemos con GitHub!
+      </p>
+
+      <p>
+        <strong>Aprenderá a:</strong>
+      </p>
+
+      <ul>
+        <li>
+          Crear y usar un repositorio
+        </li>
+        <li>
+          Iniciar y administrar una nueva rama (branch)
+        </li>
+        <li>
+          Realice cambios en un archivo y envíelos a GitHub como commits
+        </li>
+        <li>
+          Abrir y fusionar una solicitud de inclusión de una rama 
+          (merge y pull request)
+        </li>
+      </ul>
+
+      <h2 id="github">
+        ¿Qué es GitHub?
+      </h2>
+
+      <p>
+        GitHub es una plataforma de alojamiento de código para el control de 
+        versiones y la colaboración. Le permite a usted y a otras personas 
+        trabajar juntos en proyectos desde cualquier lugar.
+      </p>
+
+      <p>
+        Este tutorial le enseña lo esencial de GitHub como <em>repositorios , 
+        ramas (branches) , confirmaciones (commits) y solicitudes de inclusión 
+        de ramas (pull request).</em> Creará su propio repositorio Hola Mundo y 
+        aprenderá el flujo de trabajo Pull Request de GitHub, una forma popular 
+        de crear y revisar código.
+      </p>
+
+      <h4>
+        No es necesario codificar
+      </h4>
+
+      <p>
+        Para completar este tutorial, necesita una cuenta de 
+        <a href="https://github.com/">GitHub.com</a> y acceso a Internet. 
+        No necesita saber cómo codificar, usar la línea de comandos o instalar Git 
+        (el software de control de versiones en el que se basa GitHub).
+      </p>
+
+      <blockquote>
+        <strong>Sugerencia:</strong> Abra esta guía en una ventana (o pestaña) 
+        del navegador separada para que pueda verla mientras completa los pasos 
+        del tutorial.
+      </blockquote>
+
+      <h2 id="repositorio">
+        Paso 1. Crea un repositorio
+      </h2>
+
+      <p>
+        Por lo general, se usa un <strong>repositorio</strong> para organizar un 
+        solo proyecto. Los repositorios pueden contener carpetas y archivos, 
+        imágenes, videos, hojas de cálculo y conjuntos de datos, todo lo que 
+        necesite su proyecto. Recomendamos incluir un archivo <em>README</em> o un 
+        archivo con información sobre su proyecto. GitHub facilita agregar uno al 
+        mismo tiempo que crea su nuevo repositorio. 
+        <em>También ofrece otras opciones comunes como un archivo de licencia.</em>
+      </p>
+
+      <p>
+        Su <code>hola-mundo</code> repositorio puede ser un lugar donde almacene 
+        ideas, recursos o incluso comparta y discuta cosas con otros.
+      </p>
+
+      <h3>
+        Para crear un nuevo repositorio
+      </h3>
+
+      <ol>
+        <li>
+          En la esquina superior derecha, junto a su avatar o icono de 
+          identificación, haga clic en <i class="fas fa-plus"></i> y luego 
+          seleccione <strong>Nuevo repositorio</strong>.
+        </li>
+        <li>
+          Nombra tu repositorio <code>hola-mundo</code>.
+        </li>
+        <li>
+          Escribe una breve descripción.
+        </li>
+        <li>
+          Seleccione 
+          <strong>Inicializar este repositorio con un archivo README</strong>.
+        </li>
+      </ol>
+
+      <p>
+        <img src="img/nuevo-repo.png" alt="Ventana para crear nuevo repositorio.">
+      </p>
+
+      <p>
+        Haz clic en <strong>Crear repositorio</strong>.
+      </p>
+
+      <h2 id="rama">
+        Paso 2. Crea una rama
+      </h2>
+
+      <p>
+        <strong>La ramificación</strong> es la forma de trabajar en diferentes 
+        versiones de un repositorio a la vez.
+      </p>
+
+      <p>
+        De forma predeterminada, su repositorio tiene una rama nombrada 
+        <code>main</code> que se considera la rama definitiva. Usamos ramas para 
+        experimentar y hacer ediciones antes de hacer commits a <code>main</code>.
+      </p>
+
+      <p>
+        Cuando crea una rama fuera de la rama <code>main</code>, está haciendo una 
+        copia, o instantánea, de lo que estaba en ese momento <code>main</code>. 
+        Si alguien más hizo cambios en la rama <code>main</code> mientras trabajaba 
+        en su rama, podría incorporar esas actualizaciones.
+      </p>
+
+      <p>
+        Este diagrama muestra:
+      </p>
+
+      <ul>
+        <li>
+          La rama <code>main</code>
+        </li>
+        <li>
+          Una nueva rama llamada <code>feature</code> (porque estamos haciendo 
+          'trabajo de características' en esta rama)
+        </li>
+        <li>
+          El recorrido que <code>feature</code> lleva antes de que se 
+          fusione (merge) con <code>main</code>
+        </li>
+      </ul>
+
+      <p>
+        <img src="img/ramas.png" alt="Ramas en GitHub">
+      </p>
+
+      <p>
+        ¿Alguna vez ha guardado diferentes versiones de un archivo? Algo como:
+      </p>
+
+      <ul>
+        <li>
+          <code>story.txt</code>
+        </li>
+        <li>
+          <code>story-joe-edit.txt</code>
+        </li>
+        <li>
+          <code>story-joe-edit-reviewed.txt</code>
+        </li>
+      </ul>
+
+      <p>
+        Las ramas logran objetivos similares en los repositorios de GitHub.
+      </p>
+
+      <p>
+        Aquí en GitHub, nuestros desarrolladores, escritores y diseñadores usan 
+        ramas para mantener las correcciones de errores y el trabajo de funciones 
+        separado de nuestra rama <code>main</code> (de producción). Cuando un cambio 
+        está listo, fusionan su rama en <code>main</code>.
+      </p>
+
+      <h3>
+        Para crear una nueva rama
+      </h3>
+
+      <ol>
+        <li>
+          Vaya a su nuevo repositorio <code>hola-mundo</code>.
+        </li>
+        <li>
+          Haga clic en el menú desplegable en la parte superior de la lista de 
+          archivos que dice <strong>branch: main</strong>.
+        </li>
+        <li>
+          Escriba un nombre de rama <code>editar-readme</code>, en el cuadro de 
+          texto de nueva rama.
+        </li>
+        <li>
+          Seleccione el cuadro azul <strong>Crear rama</strong> o presione "Enter" 
+          en su teclado.
+        </li>
+      </ol>
+
+      <p>
+        <img src="img/editar-readme.gif" alt="crear rama">
+      </p>
+
+      <p>
+        Ahora tienes dos ramas <code>main</code> y <code>editar-readme</code>. 
+        Se ven exactamente iguales, ¡pero no por mucho tiempo! A continuación, 
+        agregaremos nuestros cambios a la nueva rama.
+      </p>
+
+      <h2 id="commit">
+        Paso 3.Realice y confirme cambios
+      </h2>
+
+      <p>
+        ¡Bravo! Ahora, está en la vista de código de su rama 
+        <code>editar-readme</code>, que es una copia de <code>main</code>. 
+        Hagamos algunas modificaciones.
+      </p>
+
+      <p>
+        En GitHub, los cambios guardados se denominan commits . Cada commit tiene un 
+        <em>mensaje de confirmación asociado</em>, que es una descripción que explica 
+        por qué se realizó un cambio en particular. Los mensajes de confirmación 
+        capturan el historial de sus cambios, para que otros colaboradores puedan 
+        comprender lo que ha hecho y por qué.
+      </p>
+
+      <h3>
+        Realizar y confirmar cambios
+      </h3>
+
+      <ol>
+        <li>
+          Haga clic en el archivo <code>README.md</code>.
+        </li>
+        <li>
+          Haga clic en el icono de lápiz <i class="fas fa-pencil-alt"></i> en la 
+          esquina superior derecha de la vista de archivo para editar.
+        </li>
+        <li>
+          En el editor, escribe un poco sobre ti.
+        </li>
+        <li>
+          Escribe un mensaje de confirmación que describa tus cambios.
+        </li>
+        <li>
+          Haga clic en el botón <strong>Confirmar cambios</strong>.
+        </li>
+      </ol>
+
+      <p>
+        <img src="img/commit.png" alt="commit">
+      </p>
+
+      <p>
+        Estos cambios se realizarán solo en el archivo README de su rama
+        <code>editar-readme</code>, por lo que ahora esta rama contiene contenido 
+        que es diferente de <code>main</code>.
+      </p>
+
+      <h2 id="pull-request">
+        Paso 4. Abra una solicitud de extracción
+      </h2>
+
+      <p>
+        ¡Buenas ediciones! Ahora que tiene cambios en una rama de <code>main</code>, 
+        puede abrir una <em>solicitud de inclusión de la rama pull request</em>.
+      </p>
+
+      <p>
+        Las solicitudes de inclusión de ramas (pull requests) son el corazón de la 
+        colaboración en GitHub. Cuando abre una <em>solicitud de inclusión de la 
+        rama (pull request)</em>, está proponiendo sus cambios y solicitando que 
+        alguien revise e incluya su contribución y los combine en su rama. 
+        Las <em>solicitudes de inclusión de ramas (pull requests)</em> muestran 
+        diferencias , o diferencias, del contenido de ambas ramas. Los cambios, 
+        sumas y restas se muestran en verde y rojo.
+      </p>
+
+      <p>
+        Tan pronto como realice un commit, puede abrir una solicitud de inclusión de 
+        la rama (pull request) e iniciar una discusión, incluso antes de que finalice 
+        el código.
+      </p>
+
+      <p>
+        Al usar el 
+        <a href="https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github#text-formatting-toolbar">
+          sistema @mention
+        </a> 
+        de GitHub en su mensaje de solicitud de inclusión de rama (pull request), 
+        puede solicitar comentarios de personas o equipos específicos, ya sea que se 
+        encuentren en el pasillo o en 10 zonas horarias de distancia.
+      </p>
+
+      <p>
+        Incluso puede abrir solicitudes de inclusión de ramas (pull requests) en su 
+        propio repositorio y fusionarlas usted mismo. Es una excelente manera de 
+        aprender el flujo de GitHub antes de trabajar en proyectos más grandes.
+      </p>
+
+      <h3>
+        Abra una solicitud de extracción para cambios en el archivo README
+      </h3>
+
+      <p>
+        <em>Haga clic en la imagen para una versión más grande</em>
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Paso
+            </th>
+            <th>
+              Captura de pantalla
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Haga clic en <strong>Pull Request</strong>, luego en la página Pull 
+              Request, haga clic en el botón verde <strong>Nuevo pull request</strong>.
+            </td>
+            <td>
+              <a href="https://guides.github.com/activities/hello-world/pr-tab.gif">
+                <img src="img/pr-tab.gif" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              En el cuadro <strong>Comparaciones de ejemplo</strong>, seleccione la 
+              rama que hizo <code>editar-readme</code>, para comparar con 
+              <code>main</code>(el original).
+            </td>
+            <td>
+              <a href="https://guides.github.com/activities/hello-world/pick-branch.png">
+                <img src="img/pick-branch.png" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Revise sus cambios en las diferencias en la página Comparar, asegúrese 
+              de que sean los que desea enviar.
+            </td>
+            <td>
+              <a href="https://guides.github.com/activities/hello-world/diff.png">
+                <img src="img/diff.png" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Cuando esté satisfecho de que estos son los cambios que desea enviar, 
+              haga clic en el botón verde grande <strong>Crear pull request</strong>.
+            </td>
+            <td>
+              <a href="https://guides.github.com/activities/hello-world/create-pr.png">
+                <img src="img/create-pr.png" alt="">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Dale un título a tu solicitud de extracción y escribe una breve 
+              descripción de tus cambios.
+            </td>
+            <td>
+              <a href="https://guides.github.com/activities/hello-world/pr-form.png">
+                <img src="img/pr-form.png" alt="">
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Cuando haya terminado con su mensaje, haga clic en 
+        <strong>Crear pull request</strong>.
+      </p>
+
+      <blockquote>
+        <strong>Sugerencia</strong>: puede usar 
+        <a href="https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#using-emoji">
+          emoji
+        </a> y 
+        <a href="https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/attaching-files">
+          arrastrar y soltar imágenes y gifs
+        </a>
+        en comentarios y Pull Requests.
+      </blockquote>
+
+      <h2 id="merge">
+        Paso 5. Fusiona tu Pull Request
+      </h2>
+
+      <p>
+        En este paso final, es hora de unir los cambios: fusionar su rama 
+        <code>editar-readme</code> en la rama <code>main</code>.
+      </p>
+
+      <ol>
+        <li>
+          Haga clic en el botón verde <strong>Fusionar pull request</strong> para 
+          fusionar los cambios en <code>main</code>.
+        </li>
+        <li>
+          Haga clic en <strong>Confirmar combinación</strong>.
+        </li>
+        <li>
+          Continúe y elimine la rama, ya que se han incorporado sus cambios, con el 
+          botón <strong>Eliminar rama</strong> en el cuadro morado.
+        </li>
+      </ol>
+
+      <p>
+        <img src="img/merge.png" alt="merge">
+      </p>
+      
+      <p>
+        <img src="img/delete-branch.png" alt="delete-branch">
+      </p>
+
+      <h3>
+        ¡Celebrar!
+      </h3>
+
+      <p>
+        Al completar este tutorial, ha aprendido a crear un proyecto y realizar un 
+        Pull Request en GitHub.
+      </p>
+
+      <p>
+        Esto es lo que logró en este tutorial:
+      </p>
+
+      <ul>
+        <li>
+          Creó un repositorio de código abierto
+        </li>
+        <li>
+          Comenzó y administró una nueva rama
+        </li>
+        <li>
+          Cambió un archivo y confirmó esos cambios en GitHub
+        </li>
+        <li>
+          Abrió y fusionó un Pull Request
+        </li>
+      </ul>
+
+      <p>
+        ¡Eche un vistazo a su perfil de GitHub y verá sus nuevos 
+        <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-graphs-on-your-profile/viewing-contributions-on-your-profile">
+          cuadrados de contribución!
+        </a>
+      </p>
+
+      <p>
+        Para obtener más información sobre el poder de los Pull Request, recomendamos 
+        leer la 
+        <a href="https://guides.github.com/introduction/flow/">
+          Guía de flujo de GitHub
+        </a>. También puede visitar 
+        <a href="https://github.com/explore">
+          GitHub Explore
+        </a> y participar en un proyecto de código abierto.
+      </p>
+
+      <blockquote>
+        <strong>Sugerencia</strong>: Consulte nuestras otras 
+        <a href="https://guides.github.com/">
+          guías,
+        </a>
+        <a href="https://www.youtube.com/githubguides">
+          el canal de YouTube
+        </a>
+          y la 
+        <a href="https://lab.github.com/">
+          capacitación bajo demanda
+        </a>
+        para obtener más información sobre cómo comenzar con GitHub.
+      </blockquote>
+
+      <p class="ultimo-p">
+        Última actualización 24 de julio de 2020
+      </p>
+
+    </main>
+    <!-- Contenido principal - fin -->
+
+    <!-- Barra lateral - inicio -->
+    <aside>
+
+      <ul>
+        <li>
+          <a href="#intro">
+            Intro
+          </a>
+        </li>
+        <li>
+          <a href="#github">
+            ¿Qué es GitHub?
+          </a>
+        </li>
+        <li>
+          <a href="#repositorio">
+            Crear un repositorio
+          </a>
+        </li>
+        <li>
+          <a href="#rama">
+            Crear una rama
+          </a>
+        </li>
+        <li>
+          <a href="#commit">
+            Hacer un commit
+          </a>
+        </li>
+        <li>
+          <a href="#pull-request">
+            Abrir un Pull Request
+          </a>
+        </li>
+        <li>
+          <a href="#merge">
+            Fusionar un Pull Request
+          </a>
+        </li>
+
+      </ul>
+
+    </aside>
+    <!-- Barra lateral - fin -->
+  </section>
+
+  <!-- Pie de página - inicio -->
+  <footer class="wrap">
+    <i class="fa fa-github"></i>
+    <p>
+      <a href="https://github.com">GitHub</a> es la mejor plataforma para crear y enviar software. <br>
+      Potente colaboración, revisión de código y gestión de código para proyectos privados y de código abierto.
+    </p>
+  </footer>
+  <!-- Pie de página - fin -->
+
+  <script src="https://kit.fontawesome.com/3171ff1eb7.js" crossorigin="anonymous"></script>
+</body>
+</html>
