@@ -5,6 +5,7 @@
   font-size: 18px;
   color: #444;
   background-color: #fff;
+  box-sizing: border-box;
 }
 
 #nav {
@@ -15,6 +16,11 @@
   max-width: 960px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+#nav.wrap {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #nav a img {
@@ -232,4 +238,34 @@ footer p {
 
 footer a {
   font-size: 16px;
+}
+
+@media (max-width: 920px) {
+  .wrap {
+    max-width: auto;
+    margin: 0 15px;
+  }
+
+  main {
+    width: auto;
+    float: none;    
+  }
+
+  aside {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  ul.menu {
+    float: none;
+  }
+
+  ul.menu li:first-child {
+    margin-left: 0;
+  }
+
+  .titulo {
+    font-size: 32px;
+  }
 }
